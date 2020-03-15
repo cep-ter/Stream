@@ -504,7 +504,7 @@ type CodecData struct {
 	SPSInfo    SPSInfo
 }
 
-func (self *CodecData) Type() av.CodecType {
+func (self CodecData) Type() av.CodecType {
 	return av.H264
 }
 
