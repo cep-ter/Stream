@@ -730,7 +730,7 @@ func (self *Stream) timeScale() int {
 func (self *Stream) makeCodecData() (err error) {
 	media := self.Sdp
 
-	if media.PayloadType >= 96 && media.PayloadType <= 127 {
+	if media.PayloadType >= 0 {
 		switch media.Type {
 		case av.H264:
 			for _, nalu := range media.SpropParameterSets {
